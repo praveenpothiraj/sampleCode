@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>project the world</title>
+  <style type="text/css">
+    .container{
+      display:flex;
+      background-color:springgreen;
+    }
+    .main1{
+      background-color:lawngreen;
+      font-size:30px;
+      color:white;
+      padding:10px;
+      font-weight:bolder;
+      cursor:pointer;
+    }
+    .options{
+      color:white;
+      font-size:20px;
+      padding:15px;
+      word-spacing: 20px;
+      cursor:pointer;
+      
+    }
+    .size1{
+      width:182px;
+    }
+    .mainDiv{
+      display: flex;
+      background-color: rgb(188,187,187);
+      width:400px;
+      height:300px;
+    }
+    .box{
+      color:white;
+      background-color:rgb(3,155,247);
+      font-size:20px;
+      padding:30px;
+      margin:2px;
+    }
+    .power1{
+      margin-top:20px;
+    }
+  </style>
+</head>
+<body>
+<div class="mainDiv" id="mainDiv">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+  <div class="box">6</div>
+  <div class="box">7</div>
+  <div class="box">8</div>
+
+</div>
+  </div><br><br><br><br><br><br><br>
+<div class="container power1">
+  <span class="main1">justify-content</span>
+  <span class="options">
+    <label for="flex-start1">flex-start</label>
+    <input type="radio" name="one" value="flex-start" id="flex-start1" checked onclick="fun()">
+
+    <label for="flex-end1">flex-end</label>
+    <input type="radio" name="one" value="flex-end" id="flex-end1" onclick="fun()">
+
+    <label for="center1">center</label>
+    <input type="radio" name="one" value="center" id="center1" onclick="fun()">
+    
+    <label for="space-around1">space-around</label>
+    <input type="radio" name="one" value="space-around" id="space-around1" onclick="fun()">
+    
+    <label for="space-between1">space-between</label>
+    <input type="radio" name="one" value="space-between" id="space-between1" onclick="fun()">
+    
+    <label for="space-evenly1">space-evenly</label>
+    <input type="radio" name="one" value="space-evenly" id="space-evenly1" onclick="fun()">
+  </span>
+</div>
+<br>
+<div class="container">
+  <span class="main1 size1">align-items</span>
+  <span class="options">
+    <label for="flex-start2">flex-start</label>
+    <input type="radio" name="two" value="flex-start" id="flex-start2" onclick="fun1()">
+
+    <label for="flex-end2">flex-end</label>
+    <input type="radio" name="two" value="flex-end" id="flex-end2" onclick="fun1()">
+
+    <label for="center2">center</label>
+    <input type="radio" name="two" value="center" id="center2" onclick="fun1()">
+
+    <label for="stretch2">stretch</label>
+    <input type="radio" name="two" value="stretch" id="stretch2" onclick="fun1()" checked>
+
+    <label for="baseline1">baseline</label>
+    <input type="radio" name="two" value="baseline" id="baseline1" onclick="fun1()">
+  </span>
+</div>
+<br>
+<div class="container">
+  <span class="main1 size2">align-content</span>
+  <span class="options">  
+  <label for="flex-start3">flex-start</label> 
+  <input type="radio" name="three" value="flex-start" id="flex-start3" onclick="fun2()">
+
+  <label for="flex-end3">flex-end</label> 
+  <input type="radio" name="three" value="flex-end" id="flex-end3" onclick="fun2()">
+
+  <label for="center3">center</label> 
+  <input type="radio" name="three" value="center" id="center3" onclick="fun2()">
+
+  <label for="stretch3">stretch</label> 
+  <input type="radio" name="three" value="stretch" id="stretch3" onclick="fun2()" checked>
+
+  <label for="space-around3">space-around</label> 
+  <input type="radio" name="three" value="space-around" id="space-around3" onclick="fun2()">
+
+  <label for="space-between3">space-between</label> 
+  <input type="radio" name="three" value="space-between" id="space-between3" onclick="fun2()">
+
+  </span>
+</div>
+<br>
+<div class="container"> 
+  <span class="main1">flex-wrap</span>
+  <span class="options"> 
+
+    <label for="nowarp1">nowarp</label> 
+    <input type="radio" name="four" value="nowrap" id="nowarp1" onclick="fun3()" checked>
+
+    <label for="wrap1">wrap</label> 
+    <input type="radio" name="four" value="wrap" id="wrap1" onclick="fun3()">
+
+    <label for="warp-reverse1">warp-reverse</label> 
+    <input type="radio" name="four" value="wrap-reverse" id="warp-reverse1" onclick="fun3()">
+
+  </span>
+  </div>
+  <br>
+<div class="container">
+  <span class="main1">flex-direction</span>
+  <span class="options">
+
+    <label for="row1">row</label> 
+    <input type="radio" name="five" value="row" id="row1" onclick="fun4()" checked>
+
+    <label for="column1">column</label> 
+    <input type="radio" name="five" value="column" id="column1" onclick="fun4()">
+
+    <label for="row-reverse1">row-reverse</label> 
+    <input type="radio" name="five" value="row-reverse" id="row-reverse1" onclick="fun4()">
+
+    <label for="column-reverse1">column-reverse</label> 
+    <input type="radio" name="five" value="column-reverse" id="column-reverse1" onclick="fun4()">
+
+  </span>
+</div>
+<script type="text/javascript">
+  var one_var="";
+  var two_var="";
+  var three_var="";
+  var four_var="";
+  var five_var="";
+  let net=document.getElementById('mainDiv');
+  let value1 =document.getElementsByName('one');
+  let value2 =document.getElementsByName('two');
+  let value3 =document.getElementsByName('three');
+  let value4=document.getElementsByName('four');
+  let value5=document.getElementsByName('five');
+  function success(){
+    net.style.justifyContent=one_var;
+    net.style.alignItems=two_var;
+    net.style.alignContent=three_var;
+    net.style.flexWrap=four_var;
+    net.style.flexDirection=five_var;
+  }
+  function fun(){
+  for(let i=0;i<value1.length;i++){
+    if (value1[i].checked==true){
+      one_var=value1[i].value;
+    }
+  }success();
+}
+function fun1(){
+   for(let i=0;i<value2.length;i++){
+    if (value2[i].checked==true){
+      two_var=value2[i].value;
+    }
+  }success();
+}
+function fun2(){
+   for(let i=0;i<value3.length;i++){
+    if (value3[i].checked==true){
+      three_var=value3[i].value;
+    }
+  }success();
+}
+function fun3(){
+  for(let i=0;i<value4.length;i++){
+    if (value4[i].checked==true){
+      four_var=value4[i].value;
+    }
+  }success();
+}
+function fun4(){
+  for(let i=0;i<value5.length;i++){
+    if (value5[i].checked==true){
+      five_var=value5[i].value;
+    }
+  }success();
+}
+</script>
+</body>
+</html>
